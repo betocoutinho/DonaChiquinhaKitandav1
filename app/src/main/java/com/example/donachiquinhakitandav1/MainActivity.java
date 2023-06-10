@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         bt_addcliente = findViewById(R.id.bt_cliente);
         bt_addproduto = findViewById(R.id.bt_produto);
+        add_vendas = findViewById(R.id.bt_venda);
 
         bt_addcliente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CadastroProduto.class);
+                startActivity(intent);
+            }
+        });
+
+        add_vendas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Venda.class);
                 startActivity(intent);
             }
         });

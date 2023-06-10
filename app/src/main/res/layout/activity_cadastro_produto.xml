@@ -134,8 +134,7 @@
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="TextView"
-                android:textSize="24sp"
+                android:textSize="34sp"
                 tools:text="Produtos já cadastrados:" />
             <Space
                 android:layout_width="match_parent"

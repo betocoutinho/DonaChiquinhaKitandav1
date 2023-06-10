@@ -45,7 +45,7 @@ public class ProdutoDB extends SQLiteOpenHelper {
 
     public void inserirProduto(Produto produto){
         ContentValues cv = new ContentValues();
-        cv.put(ProdutoDB.NOMEPRODUTO, produto.getNomeProduto());
+        cv.put(ProdutoDB.NOMEPRODUTO, produto.getNomeProduto().toUpperCase());
         cv.put(ProdutoDB.PRECO, produto.getPreco());
         sqLiteDatabase = this.getWritableDatabase();
         sqLiteDatabase.insert(ProdutoDB.TABLE_NAME, null, cv);

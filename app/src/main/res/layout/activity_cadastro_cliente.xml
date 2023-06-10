@@ -123,7 +123,7 @@
         android:layout_marginStart="20dp"
         android:contentDescription="@null"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="number|numberDecimal"
         android:minHeight="48dp"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/titleCreditInit"
