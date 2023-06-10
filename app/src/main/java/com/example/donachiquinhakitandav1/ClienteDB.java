@@ -19,11 +19,13 @@ public class ClienteDB extends SQLiteOpenHelper {
 
     public static final String ID = "_id";
     public static final String NOME = "nome";
+    public static final String NOMERESPONSAVEL = "nomeresponsavel";
     public static final String TELEFONE = "telefone";
     public static final String CREDITO = "CREDITO";
 
     private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "( " +
             ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NOME + " TEXT NOT NULL, " +
+            NOMERESPONSAVEL + " TEXT NOT NULL, " +
             TELEFONE + " TEXT NOT NULL," + CREDITO + " REAL NOT NULL" + ");";
 
     private SQLiteDatabase sqLiteDatabase;
@@ -47,6 +49,7 @@ public class ClienteDB extends SQLiteOpenHelper {
     public void inserirCliente(Cliente cliente){
         ContentValues cv = new ContentValues();
         cv.put(ClienteDB.NOME, cliente.getNome());
+        cv.put(ClienteDB.NOMERESPONSAVEL, cliente.getNomeResponsavel());
         cv.put(ClienteDB.TELEFONE, cliente.getTelefone());
         cv.put(ClienteDB.CREDITO, cliente.getCreditoInicial());
         sqLiteDatabase = this.getWritableDatabase();
@@ -65,10 +68,11 @@ public class ClienteDB extends SQLiteOpenHelper {
             do{
                 int id = Integer.parseInt(cursor.getString(0));
                 String nome = cursor.getString(1);
+                String nomeResponsavel = cursor.getString(1);
                 String telefone = cursor.getString(2);
                 double credito = Double.parseDouble(cursor.getString(3));
 
-                lista.add(new Cliente(id, nome, telefone, credito));
+                lista.add(new Cliente(id, nome, nomeResponsavel, telefone, credito));
             }while (cursor.moveToNext());
         }
 
