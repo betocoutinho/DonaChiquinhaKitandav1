@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroProduto"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/bt_adicionar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="358dp"
+        android:layout_marginTop="52dp"
+        android:text="ADICIONAR"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_mais50" />
+
+    <Button
+        android:id="@+id/bt_voltarpr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="48dp"
+        android:text="VOLTAR"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:iconPadding="8dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_mais50"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:text="+ R$ 0.50"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/input_preco"
+        app:layout_constraintTop_toTopOf="@+id/input_preco" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="351dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ADICIONAR PRODUTO"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_nomeproduto"
+        android:layout_width="224dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="Ex: Biscoito"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/input_preco"
+        android:layout_width="224dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
+        android:text="1.00"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/bt_menos50"
+        app:layout_constraintTop_toTopOf="@+id/bt_menos50"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:text="Nome do Produto*:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Preço:"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/bt_menos50"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:text="- R$ 0.50"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <ScrollView
+        android:layout_width="689dp"
+        android:layout_height="793dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_mais50"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:textSize="24sp"
+                tools:text="Produtos já cadastrados:" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp"/>
+
+            <TableLayout
+                android:id="@+id/tbli_principal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#523F51B5"
+                        android:text="Nome do Produto"
+                        android:textAlignment="center"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#523F51B5"
+                        android:text="Preço Unitário"
+                        android:textAlignment="center"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

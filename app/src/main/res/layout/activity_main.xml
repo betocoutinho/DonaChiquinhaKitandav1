@@ -26,9 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="40dp"
-        android:text="Adicionar Produto"
+        android:text="ADICIONAR PRODUTO"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/bt_venda"
-        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/bt_cliente"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -38,7 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="336dp"
-        android:text="Venda"
+        android:text="VENDA"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -48,7 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="292dp"
         android:layout_marginTop="40dp"
-        android:text="Adicionar Cliente"
+        android:text="ADICIONAR CLIENTE"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 

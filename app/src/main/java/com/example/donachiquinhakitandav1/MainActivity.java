@@ -15,11 +15,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bt_addcliente = findViewById(R.id.bt_cliente);
+        bt_addproduto = findViewById(R.id.bt_produto);
 
         bt_addcliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CadastroCliente.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_addproduto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CadastroProduto.class);
                 startActivity(intent);
             }
         });
